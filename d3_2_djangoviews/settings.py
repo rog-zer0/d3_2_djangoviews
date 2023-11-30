@@ -26,11 +26,6 @@ SECRET_KEY = "django-insecure-z+bo0w6qa1ywz_(3tfqdfi-e01qcy$tag4s%+3ar%llhl^w2fr
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
-
-
-# Application definition
-
 INSTALLED_APPS = [
     "django.contrib.admin",
     "django.contrib.auth",
@@ -40,8 +35,13 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.flatpages",
     "django.contrib.sites",
-    "simpleapp"
+    "simpleapp",
 ]
+
+
+
+# Application definition
+
 
 SITE_ID = 1
 
@@ -66,8 +66,7 @@ ROOT_URLCONF = "d3_2_djangoviews.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [BASE_DIR / 'templates']
-        ,
+        "DIRS": [BASE_DIR / 'templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -129,6 +128,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = "static/"
+STATICFILES_DIRS = [
+    BASE_DIR / "static"
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

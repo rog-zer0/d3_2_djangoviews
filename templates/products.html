@@ -1,0 +1,17 @@
+{% extends 'flatpages/default.html' %}
+
+{% block title %}
+    Products
+{% endblock title %}
+
+{% block content %}
+    <h1>Products</h1>
+    <ul>
+        {% for product in products %}
+            <li>{{ product }}</li>
+        {% endfor %}
+    </ul>
+{% endblock content %}
+
+
+
