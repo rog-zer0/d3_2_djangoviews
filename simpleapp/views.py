@@ -9,6 +9,7 @@ class ProductsList(ListView):
     ordering = 'name'
     template_name = 'products.html'
     context_object_name = 'products'
+    paginate_by = 2
 
     # Метод get_context_data позволяет нам изменить набор данных,
     # который будет передан в шаблон.
@@ -33,3 +34,4 @@ class ProductDetail(DetailView):
     template_name = 'product.html'
     # Название объекта, в котором будет выбранный пользователем продукт
     context_object_name = 'product'
+

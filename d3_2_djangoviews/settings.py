@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "django.contrib.flatpages",
     "django.contrib.sites",
     "simpleapp",
+    "django_filters",
 ]
 
 
