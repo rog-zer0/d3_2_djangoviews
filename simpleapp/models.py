@@ -6,7 +6,7 @@ from django.core.validators import MinValueValidator
 class Product(models.Model):
     name = models.CharField(
         max_length=50,
-        unique=True, # названия товаров не должны повторяться
+        unique=True,  # названия товаров не должны повторяться
     )
     description = models.TextField()
     quantity = models.IntegerField(
@@ -16,7 +16,7 @@ class Product(models.Model):
     category = models.ForeignKey(
         to='Category',
         on_delete=models.CASCADE,
-        related_name='products', # все продукты в категории будут доступны через поле products
+        related_name='products',  # все продукты в категории будут доступны через поле products
     )
     price = models.FloatField(
         validators=[MinValueValidator(0.0)],
